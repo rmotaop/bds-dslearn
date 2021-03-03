@@ -12,3 +12,5 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+INSERT INTO tb_course(name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML', 'https://th.bing.com/th/id/OIP.XOcIn1C4klFDj1VH97Ve8gHaHa?pid=ImgDet&rs=1', 'https://th.bing.com/th/id/R863273bdecce8ed3824c2fe1d2567837?rik=DlSKderAy9W2%2fg&riu=http%3a%2f%2fucbugg.github.io%2flearn.ucbugg%2fimages%2fbasic-animation%2fimage021.png&ehk=MkQ0bdjnlyBowvmCU%2faIT%2brFltHYn0WMVcUVT05F9Hg%3d&risl=&pid=ImgRaw');
