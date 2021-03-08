@@ -53,59 +53,59 @@ public class Resource implements Serializable {
 		this.offer = offer;
 	}
 
-	private Long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	private void setId(Long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	private String getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
-	private void setTitle(String title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	private String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
-	private void setDescription(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	private Integer getPosition() {
+	public Integer getPosition() {
 		return position;
 	}
 
-	private void setPosition(Integer position) {
+	public void setPosition(Integer position) {
 		this.position = position;
 	}
 
-	private String getImgUri() {
+	public String getImgUri() {
 		return imgUri;
 	}
 
-	private void setImgUri(String imgUri) {
+	public void setImgUri(String imgUri) {
 		this.imgUri = imgUri;
 	}
 
-	private ResourceType getType() {
+	public ResourceType getType() {
 		return type;
 	}
 
-	private void setType(ResourceType type) {
+	public void setType(ResourceType type) {
 		this.type = type;
 	}
 
-	private Offer getOffer() {
+	public Offer getOffer() {
 		return offer;
 	}
 
-	private void setOffer(Offer offer) {
+	public void setOffer(Offer offer) {
 		this.offer = offer;
 	}
 

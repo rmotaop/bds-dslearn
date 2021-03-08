@@ -94,7 +94,7 @@ public class Offer implements Serializable {
 	}
 		
 
-	private List<Resource> getResources() {
+	public List<Resource> getResources() {
 		return resources;
 	}
 

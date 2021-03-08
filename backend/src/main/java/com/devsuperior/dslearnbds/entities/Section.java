@@ -47,59 +47,59 @@ public class Section implements Serializable {
 		this.prerequisite = prerequisite;
 	}
 
-	private Long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	private void setId(Long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	private String getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
-	private void setTitle(String title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	private String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
-	private void setDescription(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	private Integer getPosition() {
+	public Integer getPosition() {
 		return position;
 	}
 
-	private void setPosition(Integer position) {
+	public void setPosition(Integer position) {
 		this.position = position;
 	}
 
-	private String getImgUri() {
+	public String getImgUri() {
 		return imgUri;
 	}
 
-	private void setImgUri(String imgUri) {
+	public void setImgUri(String imgUri) {
 		this.imgUri = imgUri;
 	}
 
-	private Resource getResource() {
+	public Resource getResource() {
 		return resource;
 	}
 
-	private void setResource(Resource resource) {
+	public void setResource(Resource resource) {
 		this.resource = resource;
 	}
 
-	private Section getPrerequisite() {
+	public Section getPrerequisite() {
 		return prerequisite;
 	}
 
-	private void setPrerequisite(Section prerequisite) {
+	public void setPrerequisite(Section prerequisite) {
 		this.prerequisite = prerequisite;
 	}
 

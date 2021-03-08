@@ -1,6 +1,6 @@
 package com.devsuperior.dslearnbds.entities;
 
-import java.io.Serializable;
+
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -12,8 +12,7 @@ import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 
 @Entity
 @Table(name = "tb_enrollment")
-public class Enrollment implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class Enrollment {
 	
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
@@ -58,35 +57,35 @@ public class Enrollment implements Serializable {
 	}
 	
 
-	private Instant getEnrollMoment() {
+	public Instant getEnrollMoment() {
 		return enrollMoment;
 	}
 
-	private void setEnrollMoment(Instant enrollMoment) {
+	public void setEnrollMoment(Instant enrollMoment) {
 		this.enrollMoment = enrollMoment;
 	}
 
-	private Instant getRefundMoment() {
+	public Instant getRefundMoment() {
 		return refundMoment;
 	}
 
-	private void setRefundMoment(Instant refundMoment) {
+	public void setRefundMoment(Instant refundMoment) {
 		this.refundMoment = refundMoment;
 	}
 
-	private boolean isAvailable() {
+	public boolean isAvailable() {
 		return available;
 	}
 
-	private void setAvailable(boolean available) {
+	public void setAvailable(boolean available) {
 		this.available = available;
 	}
 
-	private boolean isOnlyUpdate() {
+	public boolean isOnlyUpdate() {
 		return onlyUpdate;
 	}
 
-	private void setOnlyUpdate(boolean onlyUpdate) {
+	public void setOnlyUpdate(boolean onlyUpdate) {
 		this.onlyUpdate = onlyUpdate;
 	}
 	
