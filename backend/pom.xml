@@ -5,7 +5,11 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>2.3.5.RELEASE</version>
+=======
+		<version>2.4.3</version>
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.devsuperior</groupId>
@@ -13,12 +17,18 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dslearnbds</name>
 	<description>DSLearn Bootcamp</description>
+<<<<<<< HEAD
 
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR10</spring-cloud.version>
 	</properties>
 
+=======
+	<properties>
+		<java.version>11</java.version>
+	</properties>
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -38,6 +48,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+<<<<<<< HEAD
 			<exclusions>
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
@@ -52,6 +63,8 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
+=======
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 		</dependency>
 	</dependencies>
 
@@ -64,6 +77,7 @@
 		</plugins>
 	</build>
 
+<<<<<<< HEAD
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -75,4 +89,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+=======
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 </project>

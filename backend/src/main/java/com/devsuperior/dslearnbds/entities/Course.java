@@ -15,14 +15,22 @@ import javax.persistence.Table;
 @Table(name = "tb_course")
 public class Course implements Serializable {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String imgUri;
 	private String imgGrayUri;
+<<<<<<< HEAD
 	
+=======
+		
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@OneToMany(mappedBy = "course")
 	private List<Offer> offers = new ArrayList<>();
 	
@@ -35,7 +43,13 @@ public class Course implements Serializable {
 		this.name = name;
 		this.imgUri = imgUri;
 		this.imgGrayUri = imgGrayUri;
+<<<<<<< HEAD
 	}
+=======
+		
+	}
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 
 	public Long getId() {
 		return id;
@@ -97,4 +111,12 @@ public class Course implements Serializable {
 			return false;
 		return true;
 	}
+<<<<<<< HEAD
+=======
+
+
+
+
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 }

@@ -1,6 +1,7 @@
 package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -9,6 +10,11 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.persistence.Column;
+=======
+import java.util.HashSet;
+import java.util.Set;
+
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -17,6 +23,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+<<<<<<< HEAD
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -29,16 +36,31 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class User implements UserDetails, Serializable {
 	private static final long serialVersionUID = 1L;
 
+=======
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name = "tb_user")
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+<<<<<<< HEAD
 	
 	@Column(unique = true)
+=======
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	private String email;
 	private String password;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
+<<<<<<< HEAD
 	@JoinTable(name = "tb_user_role",
 		joinColumns = @JoinColumn(name = "user_id"),
 		inverseJoinColumns = @JoinColumn(name = "role_id"))	
@@ -51,11 +73,28 @@ public class User implements UserDetails, Serializable {
 	}
 
 	public User(Long id, String name, String email, String password) {
+=======
+	@JoinTable(
+			name = "tb_user_role",
+			joinColumns = @JoinColumn(name = "user_id"),
+			inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> roles = new HashSet<>();
+	
+	public User() {
+		
+	}
+
+	public User(Long id, String name, String email, String password, Set<Role> roles) {
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
+<<<<<<< HEAD
+=======
+		this.roles = roles;
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	}
 
 	public Long getId() {
@@ -94,8 +133,13 @@ public class User implements UserDetails, Serializable {
 		return roles;
 	}
 
+<<<<<<< HEAD
 	public List<Notification> getNotifications() {
 		return notifications;
+=======
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	}
 
 	@Override
@@ -122,6 +166,7 @@ public class User implements UserDetails, Serializable {
 			return false;
 		return true;
 	}
+<<<<<<< HEAD
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -162,5 +207,11 @@ public class User implements UserDetails, Serializable {
 		}
 			return false;
 	}
+=======
+
+	
+	
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	
 }

@@ -14,7 +14,11 @@ import javax.persistence.Table;
 @Table(name = "tb_section")
 public class Section implements Serializable {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -29,9 +33,16 @@ public class Section implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "prerequisite_id")
+<<<<<<< HEAD
 	private Section prerequisite;
 	
 	public Section() {
+=======
+	private Section  prerequisite;
+	
+	public Section() {
+		
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	}
 
 	public Section(Long id, String title, String description, Integer position, String imgUri, Resource resource,
@@ -126,4 +137,10 @@ public class Section implements Serializable {
 			return false;
 		return true;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+	
+>>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 }
