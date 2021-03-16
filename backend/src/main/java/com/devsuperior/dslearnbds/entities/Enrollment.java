@@ -1,25 +1,16 @@
 package com.devsuperior.dslearnbds.entities;
 
-<<<<<<< HEAD
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-=======
-
-import java.time.Instant;
-import java.util.HashSet;
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-<<<<<<< HEAD
 import javax.persistence.OneToMany;
-=======
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
@@ -27,46 +18,27 @@ import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 @Entity
 @Table(name = "tb_enrollment")
 public class Enrollment {
-<<<<<<< HEAD
-
-=======
 	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant enrollMoment;
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant refundMoment;
 	private boolean available;
 	private boolean onlyUpdate;
-<<<<<<< HEAD
-
+	
 	@ManyToMany(mappedBy = "enrollmentsDone")
 	private Set<Lesson> lessonsDone = new HashSet<>();
 	
 	@OneToMany(mappedBy = "enrollment")
 	private List<Deliver> deliveries = new ArrayList<>();
 	
-	public Enrollment() {
-=======
 	
-	@ManyToMany(mappedBy = "enrollmentsDone")
-	private Set<Lesson> lessonsDone = new HashSet<>();
-	
-	public Enrollment() {
-		
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
-	}
+	public Enrollment() {}
 
-	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refundMoment, boolean available,
-			boolean onlyUpdate) {
+	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refundMoment, boolean available, boolean onlyUpdate) {
 		super();
 		id.setUser(user);
 		id.setOffer(offer);
@@ -75,7 +47,7 @@ public class Enrollment {
 		this.available = available;
 		this.onlyUpdate = onlyUpdate;
 	}
-
+	
 	public User getStudent() {
 		return id.getUser();
 	}
@@ -83,19 +55,15 @@ public class Enrollment {
 	public void setStudent(User user) {
 		id.setUser(user);
 	}
-
+	
 	public Offer getOffer() {
 		return id.getOffer();
 	}
 	
-	public void setOffer(Offer offer) {
+	public void setOffer (Offer offer) {
 		id.setOffer(offer);
 	}
-	
-<<<<<<< HEAD
-=======
 
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	public Instant getEnrollMoment() {
 		return enrollMoment;
 	}
@@ -127,7 +95,6 @@ public class Enrollment {
 	public void setOnlyUpdate(boolean onlyUpdate) {
 		this.onlyUpdate = onlyUpdate;
 	}
-<<<<<<< HEAD
 
 	public List<Deliver> getDeliveries() {
 		return deliveries;
@@ -156,13 +123,5 @@ public class Enrollment {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
-	}
+	}	
 }
-=======
-	
-	
-	
-
-}
-
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81

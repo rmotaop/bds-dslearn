@@ -20,10 +20,7 @@ import javax.persistence.Table;
 public class Offer implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-<<<<<<< HEAD
-=======
-	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -31,11 +28,7 @@ public class Offer implements Serializable {
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant startMoment;
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant endMoment;
 	
@@ -46,16 +39,12 @@ public class Offer implements Serializable {
 	@OneToMany(mappedBy = "offer")
 	private List<Resource> resources = new ArrayList<>();
 	
-<<<<<<< HEAD
+
 	@OneToMany(mappedBy = "offer")
 	private List<Topic> topics = new ArrayList<>();	
 	
 	public Offer() {
-=======
 
-	public Offer() {
-		
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	}
 
 	public Offer(Long id, String edition, Instant startMoment, Instant endMoment, Course course) {
@@ -106,23 +95,17 @@ public class Offer implements Serializable {
 	public void setCourse(Course course) {
 		this.course = course;
 	}
-<<<<<<< HEAD
-	
-=======
-		
 
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	public List<Resource> getResources() {
 		return resources;
 	}
 
-<<<<<<< HEAD
+
 	public List<Topic> getTopics() {
 		return topics;
 	}
 
-=======
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -147,11 +130,5 @@ public class Offer implements Serializable {
 			return false;
 		return true;
 	}
-<<<<<<< HEAD
-=======
 
-	
-	
-
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 }

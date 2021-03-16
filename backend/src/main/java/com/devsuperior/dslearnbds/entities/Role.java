@@ -8,29 +8,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
+
 @Entity
 @Table(name = "tb_role")
 public class Role implements Serializable {
 	private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String authority;
 	
 	public Role() {
-<<<<<<< HEAD
-=======
-		
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
+
 	}
 
 	public Role(Long id, String authority) {
@@ -79,10 +70,5 @@ public class Role implements Serializable {
 			return false;
 		return true;
 	}
-<<<<<<< HEAD
-=======
 
-	
-	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 }

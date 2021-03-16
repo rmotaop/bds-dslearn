@@ -1,7 +1,6 @@
 package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -10,11 +9,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.persistence.Column;
-=======
-import java.util.HashSet;
-import java.util.Set;
-
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,7 +17,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-<<<<<<< HEAD
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -33,34 +26,20 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "tb_user")
-public class User implements UserDetails, Serializable {
-	private static final long serialVersionUID = 1L;
-
-=======
-import javax.persistence.Table;
-
-
-
-@Entity
-@Table(name = "tb_user")
-public class User implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class User implements UserDetails, Serializable{
 	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-<<<<<<< HEAD
 	
 	@Column(unique = true)
-=======
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	private String email;
 	private String password;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
-<<<<<<< HEAD
 	@JoinTable(name = "tb_user_role",
 		joinColumns = @JoinColumn(name = "user_id"),
 		inverseJoinColumns = @JoinColumn(name = "role_id"))	
@@ -69,32 +48,14 @@ public class User implements Serializable {
 	@OneToMany(mappedBy = "user")
 	private List<Notification> notifications = new ArrayList<>();
 	
-	public User() {
-	}
+	public User () {}
 
 	public User(Long id, String name, String email, String password) {
-=======
-	@JoinTable(
-			name = "tb_user_role",
-			joinColumns = @JoinColumn(name = "user_id"),
-			inverseJoinColumns = @JoinColumn(name = "role_id"))
-	private Set<Role> roles = new HashSet<>();
-	
-	public User() {
-		
-	}
-
-	public User(Long id, String name, String email, String password, Set<Role> roles) {
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
-<<<<<<< HEAD
-=======
-		this.roles = roles;
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	}
 
 	public Long getId() {
@@ -132,14 +93,9 @@ public class User implements Serializable {
 	public Set<Role> getRoles() {
 		return roles;
 	}
-
-<<<<<<< HEAD
+	
 	public List<Notification> getNotifications() {
 		return notifications;
-=======
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
 	}
 
 	@Override
@@ -166,12 +122,11 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
-<<<<<<< HEAD
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getAuthority()))
-				.collect(Collectors.toList());
+		
+		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getAuthority())).collect(Collectors.toList());
 	}
 
 	@Override
@@ -186,11 +141,13 @@ public class User implements Serializable {
 
 	@Override
 	public boolean isAccountNonLocked() {
+		
 		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
+		
 		return true;
 	}
 
@@ -199,19 +156,13 @@ public class User implements Serializable {
 		return true;
 	}
 	
-	public boolean hasHole(String roleName) {
+	public boolean hasRole(String roleName) {
 		for (Role role : roles) {
-			if (role.getAuthority().equals(roleName)) {
+			if(role.getAuthority().equals(roleName)) {
 				return true;
 			}
 		}
-			return false;
+		
+		return false;
 	}
-=======
-
-	
-	
-	
->>>>>>> 66eb500588bb12ceaf389bfd784a0c1d3d93cd81
-	
 }
